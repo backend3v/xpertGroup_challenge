@@ -7,3 +7,4 @@ def save_message(username: str, question: str, response: str):
         message = Message(username=username, question=question, response=response)
         session.add(message)
         session.commit()
+

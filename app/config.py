@@ -6,11 +6,11 @@ load_dotenv()
 
 
 class Settings:
-    HOST = os.getenv("HOST", "127.0.0.1")
-    PORT = int(os.getenv("PORT", 8000))
-    DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./challenge_xg.db")
+    HOST = os.getenv("HOST")
+    PORT = int(os.getenv("PORT"))
+    DATABASE_URL = os.getenv("DATABASE_URL")
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    OPEN_AI_MODEL=os.getenv("OPENAI_MODEL")
+    OPENAI_MODEL=os.getenv("OPENAI_MODEL")
 
 
 settings = Settings()
