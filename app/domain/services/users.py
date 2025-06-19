@@ -27,7 +27,7 @@ def get_role(username: str):
 
 def get_user_by_username(username: str):
     with Session(engine) as session:
-        user = session.query(User).filter(User.username == username).first()
+        user = session.query(User).filter(username = username).first()
         if user:
             return user
         else:
