@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import uvicorn
 from config import settings
 from adapters.database import init_db
-from interfaces.routes import users,chatbot,messages
+from interfaces.routes import users,chatbot,messages,aplication
 from interfaces.middlewares.api import ErrorHandlingMiddleware
 
 class Application:
@@ -17,6 +17,7 @@ class Application:
         self.load_routes()
         
     def load_routes(self):
+        self.app.include_router(aplication.router)
         self.app.include_router(users.router)
         self.app.include_router(messages.router)
         self.app.include_router(chatbot.router)
