@@ -1,5 +1,7 @@
 from fastapi import APIRouter
 from domain.services.users import create_user,get_all_users
+from domain.models.users import UserRequest
+
 
 
 
@@ -16,6 +18,6 @@ async def get_users():
 
 
 @router.post("/init_user")
-async def init_user(username: str, role: str):
-    user = create_user(username, role)
-    return {"message": "Usuario creado", "user_id": user.id}
+async def init_user(user: UserRequest):
+    user = create_user(user.username, user.role)
+    return {"Id": user.id,"Name":user.username,"Role":user.role}

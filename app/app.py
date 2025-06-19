@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import uvicorn
 from config import settings
 from adapters.database import init_db
-from interfaces.routes import users
+from interfaces.routes import users,chatbot
 
 
 class Application:
@@ -17,6 +17,7 @@ class Application:
         
     def load_routes(self):
         self.app.include_router(users.router)
+        self.app.include_router(chatbot.router)
         @self.app.get("/")
         async def root():
             return {"message": "Bienvenido a la API del chatbot"}

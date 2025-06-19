@@ -16,3 +16,19 @@ def get_all_users():
     with Session(engine) as session:
         users = session.query(User).all()
         return users
+
+def get_role(username: str):
+    with Session(engine) as session:
+        user = get_user_by_username(username)
+        if user:
+            return user.role
+        else:
+            return None
+
+def get_user_by_username(username: str):
+    with Session(engine) as session:
+        user = session.query(User).filter(User.username == username).first()
+        if user:
+            return user
+        else:
+            return None
