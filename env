@@ -1,0 +1,5 @@
+HOST=127.0.0.1
+PORT=8000
+DATABASE_URL=sqlite:///./database/challenge_xpertgroup.db
+OPENAI_API_KEY=sk-proj-XXXXXXXXXXXXXXXXXXXXXXXXXx
+OPENAI_MODEL=gpt-4o-mini
