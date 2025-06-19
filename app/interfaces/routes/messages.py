@@ -10,5 +10,5 @@ router = APIRouter()
 @router.get("/history/{username}")
 async def get_history(username: str):
     with Session(engine) as session:
-        messages = session.query(Message).filter(username == username).all()
+        messages = session.query(Message).filter(username = username).all()
         return messages
