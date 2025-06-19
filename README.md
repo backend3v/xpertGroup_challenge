@@ -62,6 +62,11 @@ OPENAI_API_KEY=tu_clave_api_aqui
 ## Configuración
 Asegúrate de que tu archivo de configuración `config.py` esté correctamente configurado para cargar la clave de API de OpenAI desde las variables de entorno.
 ## Uso
+Abrir al directorio de la aplicacion:
+```
+cd app
+```
+
 Para ejecutar la API, utiliza el siguiente comando:
 ```
 python main.py
