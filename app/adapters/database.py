@@ -6,6 +6,9 @@ from config import settings
 
 DATABASE_URL = settings.DATABASE_URL
 
+if DATABASE_URL is None:
+    raise ValueError("DATABASE_URL no puede ser None")
+
 engine = create_engine(DATABASE_URL, echo=True)
 
 
