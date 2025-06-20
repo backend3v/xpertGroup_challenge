@@ -87,7 +87,6 @@ pytest tests.py
 - **Método:** `POST`
 - **Cuerpo de la Solicitud:**
 ```
-json
   {
       "username": "nombre_de_usuario",
       "role": "rol_asignado"
@@ -98,7 +97,6 @@ json
   
 - **Respuesta:**
 ```
-json
   {
       "Id": "id del usuario",
       "Name": "nombre del usuario",
@@ -113,7 +111,6 @@ json
 - **Método:** `POST`
 - **Cuerpo de la Solicitud:**
 ```
-json
   {
       "username": "nombre_de_usuario",
       "message": "tu_mensaje"
@@ -124,7 +121,6 @@ json
   
 - **Respuesta:**
 ```
-json
   {
       "response": "respuesta_del_chatbot"
   }
@@ -136,7 +132,6 @@ json
 - **Método:** `GET`
 - **Respuesta:**
 ```
-json
   [
       {
           "username": "nombre_de_usuario",
@@ -152,7 +147,6 @@ json
 - **Método:** `GET`
 - **Respuesta:**
 ```
-json
   {
       "status": "Healthy"
   }
